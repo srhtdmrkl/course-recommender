@@ -546,11 +546,11 @@ def predict(model_name, user_ids, params):
                     courses.append(course_id)
                     scores.append(score)
         elif model_name == models[7]: # Regression with Embedding Features
-            with open('reg_nmf_model.pkl', 'rb') as f:
+            with open('data/reg_nmf_model.pkl', 'rb') as f:
                 nmf = pickle.load(f)
-            with open('reg_model.pkl', 'rb') as f:
+            with open('data/reg_model.pkl', 'rb') as f:
                 reg_model = pickle.load(f)
-            with open('reg_model_columns.pkl', 'rb') as f:
+            with open('data/reg_model_columns.pkl', 'rb') as f:
                 model_columns = pickle.load(f)
 
             ratings_df = load_ratings()
@@ -595,11 +595,11 @@ def predict(model_name, user_ids, params):
                     courses.append(course_id)
                     scores.append(score)
         elif model_name == models[8]: # Classification with Embedding Features
-            with open('clf_nmf_model.pkl', 'rb') as f:
+            with open('data/clf_nmf_model.pkl', 'rb') as f:
                 nmf = pickle.load(f)
-            with open('clf_model.pkl', 'rb') as f:
+            with open('data/clf_model.pkl', 'rb') as f:
                 clf_model = pickle.load(f)
-            with open('clf_model_columns.pkl', 'rb') as f:
+            with open('data/clf_model_columns.pkl', 'rb') as f:
                 model_columns = pickle.load(f)
 
             ratings_df = load_ratings()

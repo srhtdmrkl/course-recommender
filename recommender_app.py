@@ -44,19 +44,19 @@ def check_model_exists(model_name):
     elif model_name == backend.models[1]: # User Profile
         return True # No model to train
     elif model_name == backend.models[2]: # Clustering
-        return os.path.exists('cluster_model.pkl')
+        return os.path.exists('data/cluster_model.pkl')
     elif model_name == backend.models[3]: # Clustering with PCA
-        return os.path.exists('pca_model.pkl') and os.path.exists('cluster_model.pkl')
+        return os.path.exists('data/pca_model.pkl') and os.path.exists('data/cluster_model.pkl')
     elif model_name == backend.models[4]: # KNN
-        return os.path.exists('knn_model.pkl') and os.path.exists('knn_course_word_matrix.pkl')
+        return os.path.exists('data/knn_model.pkl') and os.path.exists('data/knn_course_word_matrix.pkl')
     elif model_name == backend.models[5]: # NMF
-        return os.path.exists('nmf_model.pkl') and os.path.exists('nmf_model_columns.pkl')
+        return os.path.exists('data/nmf_model.pkl') and os.path.exists('data/nmf_model_columns.pkl')
     elif model_name == backend.models[6]: # Neural Network
-        return os.path.exists('nn_model.pkl') and os.path.exists('nn_user_profiles.pkl') and os.path.exists('nn_course_word_matrix.pkl')
+        return os.path.exists('data/nn_model.pkl') and os.path.exists('data/nn_user_profiles.pkl') and os.path.exists('data/nn_course_word_matrix.pkl')
     elif model_name == backend.models[7]: # Regression with Embedding Features
-        return os.path.exists('reg_nmf_model.pkl') and os.path.exists('reg_model.pkl') and os.path.exists('reg_model_columns.pkl')
+        return os.path.exists('data/reg_nmf_model.pkl') and os.path.exists('data/reg_model.pkl') and os.path.exists('data/reg_model_columns.pkl')
     elif model_name == backend.models[8]: # Classification with Embedding Features
-        return os.path.exists('clf_nmf_model.pkl') and os.path.exists('clf_model.pkl') and os.path.exists('clf_model_columns.pkl')
+        return os.path.exists('data/clf_nmf_model.pkl') and os.path.exists('data/clf_model.pkl') and os.path.exists('data/clf_model_columns.pkl')
     else:
         return False
 
