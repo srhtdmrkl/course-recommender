@@ -464,7 +464,7 @@ def predict(model_name, user_ids, params):
         elif model_name == models[5]: # NMF
             with open('data/nmf_model.pkl', 'rb') as f:
                 nmf = pickle.load(f)
-            with open('nmf_model_columns.pkl', 'rb') as f:
+            with open('data/nmf_model_columns.pkl', 'rb') as f:
                 model_columns = pickle.load(f)
             
             ratings_df = load_ratings()
@@ -500,11 +500,11 @@ def predict(model_name, user_ids, params):
                 courses.append(course_id)
                 scores.append(score)
         elif model_name == models[6]: # Neural Network
-            with open('nn_model.pkl', 'rb') as f:
+            with open('data/nn_model.pkl', 'rb') as f:
                 mlp = pickle.load(f)
-            with open('nn_user_profiles.pkl', 'rb') as f:
+            with open('data/nn_user_profiles.pkl', 'rb') as f:
                 user_profiles = pickle.load(f)
-            with open('nn_course_word_matrix.pkl', 'rb') as f:
+            with open('data/nn_course_word_matrix.pkl', 'rb') as f:
                 course_word_matrix = pickle.load(f)
 
             ratings_df = load_ratings()
